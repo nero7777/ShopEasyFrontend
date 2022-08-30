@@ -3,5 +3,4 @@ export class Product{
     prdName!:string;
     prdPrice!:number;
     prdDesc!:string;
-
 }
