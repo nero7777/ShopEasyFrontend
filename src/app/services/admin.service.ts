@@ -17,7 +17,7 @@ export class AdminService {
     return this.httpClient.get(this.baseUrlAdminLogin+ adminId+"/"+adminName+"/"+adminPassword);
   }
 
-  baseUrlAdminPage:string="http://localhost:8090/adminRest/api";
+  baseUrlAdminPage:string="http://localhost:8085/adminRest/api";
   getAllUserdetails()
   {
     return this.httpClient.get(this.baseUrlAdminPage+"/userDetails")
@@ -26,25 +26,25 @@ export class AdminService {
   deleteUser(userId:any,users:UserDetails)
   {
  
-    return this.httpClient.delete("http://localhost:8090/adminRest/api/userDetails/delete/"+userId);
+    return this.httpClient.delete("http://localhost:8085/adminRest/api/userDetails/delete/"+userId);
   }
 
   deleteProduct(prdId:any,product:Product)
   {
  
-    return this.httpClient.delete("http://localhost:8090/adminRest/api/deleteProduct/"+prdId);
+    return this.httpClient.delete("http://localhost:8085/adminRest/api/deleteProduct/"+prdId);
   }
 
   addProduct(product:Product){
-    return this.httpClient.post("http://localhost:8090/adminRest/api/addproduct",product);
+    return this.httpClient.post("http://localhost:8085/adminRest/api/addproduct",product);
   }
 
   getPrdList(){
-    return this.httpClient.get("http://localhost:8090/prd-api/prdlist");
+    return this.httpClient.get("http://localhost:8085/prd-api/prdlist");
   }
 
   updateCardStatus(userId:any,users:UserDetails){
-    return this.httpClient.put("http://localhost:8090/adminRest/api/updateCardStatus/"+userId,userId);
+    return this.httpClient.put("http://localhost:8085/adminRest/api/updateCardStatus/"+userId,userId);
   }
 
 }
