@@ -41,6 +41,10 @@
     "type": "git",
     "url": "git+https://github.com/nero7777/ShopEasyFrontend.git"
   },
+<<<<<<< HEAD
+=======
+  "keywords": [],
+>>>>>>> 3a1a82f2b64bb1da55ad6987e717778f49cba275
   "author": "",
   "license": "ISC",
   "bugs": {
