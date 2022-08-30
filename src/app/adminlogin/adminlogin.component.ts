@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from '../Services/admin.service';
 import { Adminlogin } from './adminlogin';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-adminlogin',
