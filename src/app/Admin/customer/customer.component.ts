@@ -1,45 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CustHttpClientService } from 'src/app/Services/user-http-client.service';
+import { CustHttpClientService } from 'src/app/services/user-http-client.service';
 
 import { Customer } from './customer';
 
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.css']
+  styleUrls: ['./customer.component.css'],
 })
 export class CustomerComponent implements OnInit {
-
   [x: string]: any;
   custList: Customer[] = [];
   searchValue: any;
-  user:any;
-  searchvisibility: boolean=false;
+  user: any;
+  searchvisibility: boolean = false;
 
-  constructor(private custSer: CustHttpClientService,private fb: FormBuilder, private router: Router) { }
+  constructor(
+    private custSer: CustHttpClientService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getuserList();
   }
 
-  findUser(searchValue:string){
-    this.custSer.getUserbyName(this.searchValue).subscribe((Response:any)=>
-    {
+  findUser(searchValue: string) {
+    this.custSer.getUserbyName(this.searchValue).subscribe(
+      (Response: any) => {
         console.log(Response);
-        this.user=Response;
+        this.user = Response;
         console.log(this.user);
-        this.searchvisibility=true;
-    },
-    (error)=>{
-      console.log("Error occured",error)
-      this.router.navigate(['/**'])
-
-    }
-    )
-
-
+        this.searchvisibility = true;
+      },
+      (error) => {
+        console.log('Error occured', error);
+        this.router.navigate(['/**']);
+      }
+    );
   }
 
   getuserList() {
@@ -60,5 +60,5 @@ export class CustomerComponent implements OnInit {
     // this.custSer.deleteCustomer(customer.userId).subscribe((Response: any) => {
     //   this.custList = this.custList.filter((c) => c == customer);
     //   this.getuserList();
-    };
+  }
 }

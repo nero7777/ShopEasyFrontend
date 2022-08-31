@@ -12,6 +12,10 @@ import { EditCustomerComponent } from './Admin/edit-customer/edit-customer.compo
 
 import { ProducthandlingComponent } from './producthandling/producthandling.component';
 import { HeaderComponent } from './header/header.component';
+import { MyCardComponent } from './my-card/my-card.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { HeaderComponent } from './header/header.component';
     CustomerComponent,
     EditCustomerComponent,
     ProducthandlingComponent,
-    HeaderComponent
+    HeaderComponent,
+    MyCardComponent,
+    AboutusComponent,
+    ContactusComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

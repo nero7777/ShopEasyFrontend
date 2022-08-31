@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { AdminService } from '../Services/admin.service';
+import { AdminService } from '../services/admin.service';
 import { UserDetails } from './user-details';
 
 @Component({
@@ -29,12 +29,12 @@ export class AdminpageComponent implements OnInit {
       console.log(data);
       this.user=data;
   });
-  OnDelete(userId:any){
-    localStorage.setItem("userId", userId);
+  OnDelete(this.userId:any){
+    localStorage.setItem("userId", this.userId);
    
     this.userId=localStorage.getItem("userId");
     console.log(this.userId);
-    
+   
     Swal.fire({
       title: 'Are you sure want to remove?',
       text: 'You will not be able to recover this user data!',
@@ -60,9 +60,9 @@ export class AdminpageComponent implements OnInit {
     });
   }
 
-  CreateCard(userId:any){
+  CreateCard(this.userId:any){
 
-    localStorage.setItem("userId",userId);
+    localStorage.setItem("userId",this.userId);
      
       this.userId=localStorage.getItem("userId");
       console.log(this.userId);
@@ -146,3 +146,31 @@ export class AdminpageComponent implements OnInit {
   }
 
 }
+function OnDelete(userId: any, any: any) {
+  throw new Error('Function not implemented.');
+}
+
+function sortData() {
+  throw new Error('Function not implemented.');
+}
+
+function sortPhone() {
+  throw new Error('Function not implemented.');
+}
+
+function sortCard() {
+  throw new Error('Function not implemented.');
+}
+
+function sortStatus() {
+  throw new Error('Function not implemented.');
+}
+
+function Search() {
+  throw new Error('Function not implemented.');
+}
+
+function CreateCard(userId: any, any: any) {
+  throw new Error('Function not implemented.');
+}
+
